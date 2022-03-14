@@ -2,11 +2,13 @@
 var generateBtn = document.querySelector("#generate");
 
 var randomNumber = function(min, max) {
-  var value = Math.floor(Math.random() * (max - min) + min);
+  var value = Math.floor(Math.random() * (128 - 0 + 1));
   
 
   return value;
 };
+
+
 
 // Write password to the #password input
 function writePassword() {
@@ -28,10 +30,12 @@ function writePassword() {
   }
 
     if (promptNumerical === "yes") {
-      window.alert("Numeric Values Added");
-      // add numeric values
-    
-  };
+      window.alert("Numeric Values Added")
+      writePassword = randomNumber();
+      console.log(writePassword);
+
+  
+};
     
 
   var promptText = window.prompt("Do you want text characters? Please enter Yes or No.");
@@ -51,7 +55,7 @@ function writePassword() {
     
   }
 
-    if (promptNumerical === "yes") {
+    if (promptText === "yes") {
       window.alert("Text Values Added");
       // add text values
       
@@ -82,10 +86,10 @@ function writePassword() {
   var promptCharacterlength = window.prompt("Enter 8 or 10 to choose character length.");
 
 if (promptCharacterlength === "8") {
-  var password = randomNumber(8);
+  
 }
 if (promptCharacterlength === "10") {
-  var password = randomNumber(10);
+  
 }
   var passwordText = document.querySelector("#password");
 
