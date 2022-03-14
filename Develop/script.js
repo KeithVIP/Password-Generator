@@ -1,8 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+var possibleCharacters = {
+  promptNumerical: "1,2,3,4,5,6,7,8,9,10",
+  prompText: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p",
+  promptCharacters: "!,@,#,$,%,^,&,*"
+}
+
+
 var randomNumber = function(min, max) {
-  var value = Math.floor(Math.random() * (128 - 0 + 1));
+  var value = Math.floor(Math.random() * (max - min + min));
   
 
   return value;
@@ -29,10 +36,9 @@ function writePassword() {
     
   }
 
-    if (promptNumerical === "yes") {
-      window.alert("Numeric Values Added")
-      writePassword = randomNumber();
-      console.log(writePassword);
+  if (promptNumerical === "yes") {
+    window.alert("Numeric Values Added");
+    var promptnumerical = randomNumber
 
   
 };
@@ -84,18 +90,15 @@ function writePassword() {
   };
 
   var promptCharacterlength = window.prompt("Enter 8 or 10 to choose character length.");
-
-if (promptCharacterlength === "8") {
   
-}
-if (promptCharacterlength === "10") {
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
   
-}
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
+    passwordText.value = password;
+  
+  }
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
