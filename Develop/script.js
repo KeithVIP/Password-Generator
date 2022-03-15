@@ -28,7 +28,7 @@ function writePassword() {
   if (promptLength === "" || promptLength === null) {
     window.alert("You need to provide a valid answer! Please try again.");
     // use return to call it again and stop the rest of this function from running
-    promptLength = window.prompt("Please enter 8 or 10 for password length");
+    promptLength = window.prompt("Please enter 8 or 128 for password length");
   }
   var promptNumerical = window.confirm("Do you want numerical characters?");
   var promptLower = window.confirm("Do you want lowercase characters?");
@@ -53,12 +53,9 @@ function writePassword() {
     console.log(possibleChars);
   }
 
-    for(i = 0; i < 5; i++) {
-    CODE HERE
-    }
-    if() {
-    CODE HERE
-    }
+  for(i = 0; i < promptLength; i++) {
+    var finalPassword += possibleChars[Math.floor(Math.random() * possibleChars.length]
+  }
     
   return possibleChars;
   }
