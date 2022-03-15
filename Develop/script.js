@@ -1,4 +1,4 @@
-// Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
 var possibleCharacters = {
@@ -14,9 +14,6 @@ var randomNumber = function (min, max) {
   return value;
 };
 
-
-
-// Write password to the #password input
 function writePassword() {
   var possibleChars = "";
   var finalPassword = ""
@@ -25,7 +22,7 @@ function writePassword() {
   if (promptLength === "" || promptLength === null) {
     window.alert("You need to provide a valid answer! Please try again.");
   }
-  
+
   var promptNumerical = window.confirm("Do you want numerical characters?");
   var promptLower = window.confirm("Do you want lowercase characters?");
   var promptUpper = window.confirm("Do you want uppercase characters?");
@@ -60,7 +57,7 @@ function writePassword() {
 }
 
 function displayPassword() {
-  
+
   var password = writePassword();
 
   var passwordText = document.querySelector("#password");
