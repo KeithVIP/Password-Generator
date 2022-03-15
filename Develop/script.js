@@ -21,7 +21,8 @@ var randomNumber = function (min, max) {
 
 // Write password to the #password input
 function writePassword() {
-  var possibleChars;
+  var possibleChars = "";
+  var finalPassword = ""
 
   var promptLength = window.prompt("Please enter 8 or 10 for password length");
   if (promptLength === "" || promptLength === null) {
@@ -41,20 +42,26 @@ function writePassword() {
   }
   if (promptLower) {
    possibleChars.concat(possibleCharacters.lowercase) 
-   console.loc(possibleChars);
+   console.log(possibleChars);
   }
   if (promptUpper) {
     possibleChars.concat(possibleCharacters.uppercase) 
-    console.loc(possibleChars);
+    console.log(possibleChars);
   }
   if (promptSpecial) {
     possibleChars.concat(possibleCharacters.special) 
-    console.loc(possibleChars);
-  }
-    return;
-  
+    console.log(possibleChars);
   }
 
+    for(i = 0; i < 5; i++) {
+    CODE HERE
+    }
+    if() {
+    CODE HERE
+    }
+    
+  return possibleChars;
+  }
 
 //I fixed this up for you, and put this separate displayPassword function definition here.
 function displayPassword() {
